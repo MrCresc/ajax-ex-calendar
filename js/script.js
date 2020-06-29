@@ -7,6 +7,14 @@ $(document).ready(
     scriviNomeMese(valMese)
     creaMese(valMese)
     holiday(valMese)
+    
+    // BONUS PERSONALE Aggiungo funzione al click della singola casella per maggiori informazioni
+    $(document).on('click','.quadratino',function () {
+      var stringaData = $(this).attr('valGiorno')
+      var festaEventuale = $(this).children('.holiday').text()
+      var infoData = moment(stringaData).format('dddd Do MMMM YYYY')
+      alert(infoData + ', ' + festaEventuale)
+    })
 
     // Aggiungo funzione al click del tasto mese precedente
     $(document).on('click','#precedente',function () {
@@ -22,14 +30,14 @@ $(document).ready(
         holiday(valMese)
       // Impongo condizione nel caso il numero del mese sia maggiore a 10
       } else if (valMese > 10 && valMese <= 12) {
-          // Rendo il valore un numero intero e sottraggo di uno
-          valMese = parseInt(valMese)-1
-          // Lo ritrasformo in stringa
-          valMese = String(valMese)
-          // Eseguo le funzioni
-          scriviNomeMese(valMese)
-          creaMese(valMese)
-          holiday(valMese)
+        // Rendo il valore un numero intero e sottraggo di uno
+        valMese = parseInt(valMese)-1
+        // Lo ritrasformo in stringa
+        valMese = String(valMese)
+        // Eseguo le funzioni
+        scriviNomeMese(valMese)
+        creaMese(valMese)
+        holiday(valMese)
       }
     })
 

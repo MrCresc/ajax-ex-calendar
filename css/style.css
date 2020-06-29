@@ -9,13 +9,25 @@ body {
   text-shadow: 0 0 5px #000000;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 nav > * {
   margin: 10px;
 }
 
 nav > i {
   cursor: pointer;
-  font-size: 30px;
+  font-size: 50px;
+}
+
+.nameWrapper {
+  border: 3px solid white;
+  border-radius: 10px;
+  width: 300px;
 }
 
 .red {
