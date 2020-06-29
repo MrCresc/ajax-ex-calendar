@@ -1,5 +1,8 @@
 body {
+  height: 100vh;
   background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-weight: bold;
   text-align: center;
   color: white;
@@ -12,6 +15,11 @@ nav > * {
 
 nav > i {
   cursor: pointer;
+  font-size: 30px;
+}
+
+.red {
+  color: red;
 }
 
 .container {
@@ -21,6 +29,7 @@ nav > i {
   display: flex;
   width: 840px;
   flex-wrap: wrap;
+  box-shadow: 0 0 8px black;
 }
 
 .quadratino {
