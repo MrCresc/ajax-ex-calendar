@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>js-jq-ajax-grigliaquad</title>
+    <script src="https://momentjs.com/downloads/moment.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <h1>Calendario Festività Boolean 2018</h1>
+
+    <nav>
+      <i id="precedente" class="fas fa-chevron-left"></i>
+      <h2 id="mese" month="01"></h2>
+      <i id="successivo" class="fas fa-chevron-right"></i>
+    </nav>
+
+
+    <div class="container">
+
+    </div>
+
+    <script id="entry-template" type="text/x-handlebars-template">
+      <div class="quadratino" valGiorno = {{valGiorno}}>
+        <h2>{{dayNumber}}</h2>
+        <h3 class="holiday"></h3>
+      </div>
+    </script>
+
+    <script type="text/javascript" src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
